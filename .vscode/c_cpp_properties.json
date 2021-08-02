@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "name": "androgg",
+            "intelliSenseMode": "gcc-x86",
+            "cStandard": "c99",
+            "includePath": [
+                "C:/CSFML/include"
+            ]
+        }
+    ],
+    "version": 4
+}

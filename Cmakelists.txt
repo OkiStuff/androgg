@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.18)
+
+project(androgg)
+set(CSFML_DIR "C:/CSFML")
+set(COMPILER_TYPE "gcc")
+INCLUDE_DIRECTORIES(${CSFML_DIR}/include/)
+LINK_DIRECTORIES(${CSFML_DIR}/lib/${COMPILER_TYPE})
+set(source "src")
+
+#could use aux_source_directory() but its better to list each file to ensure new files are compiled
+#https://stackoverflow.com/a/25077976/10415312
+
+set(sources
+${source}/main.c
+)
+
+
+add_executable(main ${sources})
+TARGET_LINK_LIBRARIES(main csfml-audio csfml-graphics csfml-network csfml-system csfml-window)
